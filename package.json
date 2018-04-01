@@ -1,0 +1,14 @@
+{
+  "name": "moonscript-loader",
+  "version": "1.0.0",
+  "author": "Sol Bekic / s-ol.nu",
+  "description": "loader for moonscript files",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "loader-utils": "^1.0.2"
+  },
+  "peerDependencies": {
+    "webpack": "^2.0.0 || ^3.0.0 || ^4.0.0"
+  }
+}
