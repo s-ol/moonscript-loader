@@ -14,37 +14,37 @@ install dependencies:
 
 set up your webpack config (`webpack.config.js`):
 
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
+```js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-    module.exports = {
-      context: __dirname,
-      entry: './toast.moon',
-      mode: 'development',
-      module: {
-        rules: [
-          {
-            test: /\.moon$/,
-            use: [
-              'fengari-loader',
-              'moonscript-loader',
-            ]
-          },
-          {
-            test: /\.lua$/,
-            use: 'fengari-loader',
-          },
+module.exports = {
+  context: __dirname,
+  entry: './toast.moon',
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.moon$/,
+        use: [
+          'fengari-loader',
+          'moonscript-loader',
         ]
       },
-      plugins: [
-        new HtmlWebpackPlugin(),
-      ],
-    }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin(),
+  ],
+}
+```
 
 write some Moonscript (`toast.moon`):
-    window = js.global
+```moonscript
+window = js.global
 
-    y = (x) -> x * 2
-    window.console\log y 14
+y = (x) -> x * 2
+window.console\log y 14
+```
 
 run everything and visit http://localhost:8080 :)
 
