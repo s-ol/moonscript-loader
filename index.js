@@ -27,7 +27,9 @@ module.exports = function(content) {
   job.stdin.write(content);
   job.stdin.end();
 
+  let done;
   job.on('error', function (err) {
+    done = true;
     callback(err);
   });
 
@@ -42,6 +44,8 @@ module.exports = function(content) {
   });
 
   job.on('close', function (code) {
+    if (done)
+      return;
     if (code === 0)
       callback(null, data);
     else

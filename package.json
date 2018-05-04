@@ -1,6 +1,6 @@
 {
   "name": "moonscript-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Sol Bekic / s-ol.nu",
   "description": "loader for moonscript files",
   "license": "MIT",
